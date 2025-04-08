@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ name }} - Pokédex</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="result-card">
+      <h1>{{ name }}</h1>
+      <img src="{{ sprite }}" alt="{{ name }}">
+      <p><strong>Type:</strong> {{ ', '.join(types) }}</p>
+      <p><strong>Abilities:</strong> {{ ', '.join(abilities) }}</p>
+      <p><strong>Height:</strong> {{ height }} m</p>
+      <p><strong>Weight:</strong> {{ weight }} kg</p>
+      <br>
+      <a href="/">Search another Pokémon</a>
+  </div>
+</body>
+
+</html>
